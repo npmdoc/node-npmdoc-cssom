@@ -1,0 +1,3024 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/NV/CSSOM">cssom (v0.3.2)</a>
+</h1>
+<h4>CSS Object Model implementation and CSS parser</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cssom">module cssom</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.CSSImportRule">
+            function <span class="apidocSignatureSpan">cssom.</span>CSSImportRule
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.CSSMediaRule">
+            function <span class="apidocSignatureSpan">cssom.</span>CSSMediaRule
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.CSSRule">
+            function <span class="apidocSignatureSpan">cssom.</span>CSSRule
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.CSSStyleDeclaration">
+            function <span class="apidocSignatureSpan">cssom.</span>CSSStyleDeclaration
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.CSSStyleRule">
+            function <span class="apidocSignatureSpan">cssom.</span>CSSStyleRule
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.CSSStyleSheet">
+            function <span class="apidocSignatureSpan">cssom.</span>CSSStyleSheet
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.MediaList">
+            function <span class="apidocSignatureSpan">cssom.</span>MediaList
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.StyleSheet">
+            function <span class="apidocSignatureSpan">cssom.</span>StyleSheet
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.clone">
+            function <span class="apidocSignatureSpan">cssom.</span>clone
+            <span class="apidocSignatureSpan">(stylesheet)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.parse">
+            function <span class="apidocSignatureSpan">cssom.</span>parse
+            <span class="apidocSignatureSpan">(token)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cssom.</span>CSSDocumentRule</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cssom.</span>CSSFontFaceRule</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cssom.</span>CSSHostRule</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cssom.</span>CSSImportRule.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cssom.</span>CSSKeyframeRule</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cssom.</span>CSSKeyframesRule</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cssom.</span>CSSMediaRule.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cssom.</span>CSSRule.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cssom.</span>CSSStyleDeclaration.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cssom.</span>CSSStyleRule.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cssom.</span>CSSStyleSheet.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cssom.</span>CSSValue</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cssom.</span>CSSValueExpression</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cssom.</span>MatcherList</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cssom.</span>MediaList.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cssom.CSSDocumentRule">module cssom.CSSDocumentRule</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.CSSDocumentRule.CSSDocumentRule">
+            function <span class="apidocSignatureSpan">cssom.</span>CSSDocumentRule
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cssom.CSSFontFaceRule">module cssom.CSSFontFaceRule</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.CSSFontFaceRule.CSSFontFaceRule">
+            function <span class="apidocSignatureSpan">cssom.</span>CSSFontFaceRule
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cssom.CSSHostRule">module cssom.CSSHostRule</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.CSSHostRule.CSSHostRule">
+            function <span class="apidocSignatureSpan">cssom.</span>CSSHostRule
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cssom.CSSImportRule">module cssom.CSSImportRule</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.CSSImportRule.CSSImportRule">
+            function <span class="apidocSignatureSpan">cssom.</span>CSSImportRule
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cssom.CSSImportRule.prototype">module cssom.CSSImportRule.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.CSSImportRule.prototype.constructor">
+            function <span class="apidocSignatureSpan">cssom.CSSImportRule.prototype.</span>constructor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">cssom.CSSImportRule.prototype.</span>type</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cssom.CSSImportRule.prototype.</span>parentRule</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cssom.CSSImportRule.prototype.</span>parentStyleSheet</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cssom.CSSKeyframeRule">module cssom.CSSKeyframeRule</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.CSSKeyframeRule.CSSKeyframeRule">
+            function <span class="apidocSignatureSpan">cssom.</span>CSSKeyframeRule
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cssom.CSSKeyframesRule">module cssom.CSSKeyframesRule</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.CSSKeyframesRule.CSSKeyframesRule">
+            function <span class="apidocSignatureSpan">cssom.</span>CSSKeyframesRule
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cssom.CSSMediaRule">module cssom.CSSMediaRule</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.CSSMediaRule.CSSMediaRule">
+            function <span class="apidocSignatureSpan">cssom.</span>CSSMediaRule
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cssom.CSSMediaRule.prototype">module cssom.CSSMediaRule.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.CSSMediaRule.prototype.constructor">
+            function <span class="apidocSignatureSpan">cssom.CSSMediaRule.prototype.</span>constructor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">cssom.CSSMediaRule.prototype.</span>type</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cssom.CSSMediaRule.prototype.</span>parentRule</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cssom.CSSMediaRule.prototype.</span>parentStyleSheet</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cssom.CSSRule">module cssom.CSSRule</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.CSSRule.CSSRule">
+            function <span class="apidocSignatureSpan">cssom.</span>CSSRule
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">cssom.CSSRule.</span>CHARSET_RULE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">cssom.CSSRule.</span>COUNTER_STYLE_RULE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">cssom.CSSRule.</span>DOCUMENT_RULE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">cssom.CSSRule.</span>FONT_FACE_RULE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">cssom.CSSRule.</span>FONT_FEATURE_VALUES_RULE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">cssom.CSSRule.</span>IMPORT_RULE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">cssom.CSSRule.</span>KEYFRAMES_RULE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">cssom.CSSRule.</span>KEYFRAME_RULE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">cssom.CSSRule.</span>MARGIN_RULE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">cssom.CSSRule.</span>MEDIA_RULE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">cssom.CSSRule.</span>NAMESPACE_RULE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">cssom.CSSRule.</span>PAGE_RULE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">cssom.CSSRule.</span>REGION_STYLE_RULE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">cssom.CSSRule.</span>STYLE_RULE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">cssom.CSSRule.</span>SUPPORTS_RULE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">cssom.CSSRule.</span>UNKNOWN_RULE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">cssom.CSSRule.</span>VIEWPORT_RULE</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cssom.CSSRule.prototype">module cssom.CSSRule.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.CSSRule.prototype.constructor">
+            function <span class="apidocSignatureSpan">cssom.CSSRule.prototype.</span>constructor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cssom.CSSStyleDeclaration">module cssom.CSSStyleDeclaration</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.CSSStyleDeclaration.CSSStyleDeclaration">
+            function <span class="apidocSignatureSpan">cssom.</span>CSSStyleDeclaration
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cssom.CSSStyleDeclaration.prototype">module cssom.CSSStyleDeclaration.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.CSSStyleDeclaration.prototype.constructor">
+            function <span class="apidocSignatureSpan">cssom.CSSStyleDeclaration.prototype.</span>constructor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.CSSStyleDeclaration.prototype.getPropertyCSSValue">
+            function <span class="apidocSignatureSpan">cssom.CSSStyleDeclaration.prototype.</span>getPropertyCSSValue
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.CSSStyleDeclaration.prototype.getPropertyPriority">
+            function <span class="apidocSignatureSpan">cssom.CSSStyleDeclaration.prototype.</span>getPropertyPriority
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.CSSStyleDeclaration.prototype.getPropertyShorthand">
+            function <span class="apidocSignatureSpan">cssom.CSSStyleDeclaration.prototype.</span>getPropertyShorthand
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.CSSStyleDeclaration.prototype.getPropertyValue">
+            function <span class="apidocSignatureSpan">cssom.CSSStyleDeclaration.prototype.</span>getPropertyValue
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.CSSStyleDeclaration.prototype.isPropertyImplicit">
+            function <span class="apidocSignatureSpan">cssom.CSSStyleDeclaration.prototype.</span>isPropertyImplicit
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.CSSStyleDeclaration.prototype.removeProperty">
+            function <span class="apidocSignatureSpan">cssom.CSSStyleDeclaration.prototype.</span>removeProperty
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.CSSStyleDeclaration.prototype.setProperty">
+            function <span class="apidocSignatureSpan">cssom.CSSStyleDeclaration.prototype.</span>setProperty
+            <span class="apidocSignatureSpan">(name, value, priority)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">cssom.CSSStyleDeclaration.prototype.</span>cssText</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cssom.CSSStyleRule">module cssom.CSSStyleRule</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.CSSStyleRule.CSSStyleRule">
+            function <span class="apidocSignatureSpan">cssom.</span>CSSStyleRule
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.CSSStyleRule.parse">
+            function <span class="apidocSignatureSpan">cssom.CSSStyleRule.</span>parse
+            <span class="apidocSignatureSpan">(ruleText)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cssom.CSSStyleRule.prototype">module cssom.CSSStyleRule.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.CSSStyleRule.prototype.constructor">
+            function <span class="apidocSignatureSpan">cssom.CSSStyleRule.prototype.</span>constructor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">cssom.CSSStyleRule.prototype.</span>type</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cssom.CSSStyleRule.prototype.</span>parentRule</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cssom.CSSStyleRule.prototype.</span>parentStyleSheet</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cssom.CSSStyleSheet">module cssom.CSSStyleSheet</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.CSSStyleSheet.CSSStyleSheet">
+            function <span class="apidocSignatureSpan">cssom.</span>CSSStyleSheet
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cssom.CSSStyleSheet.prototype">module cssom.CSSStyleSheet.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.CSSStyleSheet.prototype.constructor">
+            function <span class="apidocSignatureSpan">cssom.CSSStyleSheet.prototype.</span>constructor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.CSSStyleSheet.prototype.deleteRule">
+            function <span class="apidocSignatureSpan">cssom.CSSStyleSheet.prototype.</span>deleteRule
+            <span class="apidocSignatureSpan">(index)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.CSSStyleSheet.prototype.insertRule">
+            function <span class="apidocSignatureSpan">cssom.CSSStyleSheet.prototype.</span>insertRule
+            <span class="apidocSignatureSpan">(rule, index)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.CSSStyleSheet.prototype.toString">
+            function <span class="apidocSignatureSpan">cssom.CSSStyleSheet.prototype.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cssom.CSSStyleSheet.prototype.</span>parentStyleSheet</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cssom.CSSValue">module cssom.CSSValue</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.CSSValue.CSSValue">
+            function <span class="apidocSignatureSpan">cssom.</span>CSSValue
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cssom.CSSValueExpression">module cssom.CSSValueExpression</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.CSSValueExpression.CSSValueExpression">
+            function <span class="apidocSignatureSpan">cssom.</span>CSSValueExpression
+            <span class="apidocSignatureSpan">(token, idx)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cssom.MatcherList">module cssom.MatcherList</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.MatcherList.MatcherList">
+            function <span class="apidocSignatureSpan">cssom.</span>MatcherList
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cssom.MediaList">module cssom.MediaList</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.MediaList.MediaList">
+            function <span class="apidocSignatureSpan">cssom.</span>MediaList
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cssom.MediaList.prototype">module cssom.MediaList.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.MediaList.prototype.appendMedium">
+            function <span class="apidocSignatureSpan">cssom.MediaList.prototype.</span>appendMedium
+            <span class="apidocSignatureSpan">(medium)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.MediaList.prototype.constructor">
+            function <span class="apidocSignatureSpan">cssom.MediaList.prototype.</span>constructor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.MediaList.prototype.deleteMedium">
+            function <span class="apidocSignatureSpan">cssom.MediaList.prototype.</span>deleteMedium
+            <span class="apidocSignatureSpan">(medium)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">cssom.MediaList.prototype.</span>mediaText</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cssom.StyleSheet">module cssom.StyleSheet</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.StyleSheet.StyleSheet">
+            function <span class="apidocSignatureSpan">cssom.</span>StyleSheet
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cssom.clone">module cssom.clone</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.clone.clone">
+            function <span class="apidocSignatureSpan">cssom.</span>clone
+            <span class="apidocSignatureSpan">(stylesheet)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cssom.parse">module cssom.parse</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cssom.parse.parse">
+            function <span class="apidocSignatureSpan">cssom.</span>parse
+            <span class="apidocSignatureSpan">(token)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cssom" id="apidoc.module.cssom">module cssom</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.CSSImportRule" id="apidoc.element.cssom.CSSImportRule">
+        function <span class="apidocSignatureSpan">cssom.</span>CSSImportRule
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CSSImportRule() {
+	CSSOM.CSSRule.call(this);
+	this.href = "";
+	this.media = new CSSOM.MediaList();
+	this.styleSheet = new CSSOM.CSSStyleSheet();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+					state = "before-name";
+					break;
+				case "atRule":
+					buffer = "";
+					state = "before-selector";
+					break;
+				case "importRule":
+					importRule = new CSSOM.<span class="apidocCodeKeywordSpan">CSSImportRule</span>();
+					importRule.parentStyleSheet = importRule.styleSheet.parentStyleSheet = styleSheet;
+					importRule.cssText = buffer + character;
+					styleSheet.cssRules.push(importRule);
+					buffer = "";
+					state = "before-selector";
+					break;
+				default:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.CSSMediaRule" id="apidoc.element.cssom.CSSMediaRule">
+        function <span class="apidocSignatureSpan">cssom.</span>CSSMediaRule
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CSSMediaRule() {
+	CSSOM.CSSRule.call(this);
+	this.media = new CSSOM.MediaList();
+	this.cssRules = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+				documentRule = new CSSOM.CSSDocumentRule();
+				documentRule.__starts = i;
+				i += "-moz-document".length;
+				buffer = "";
+				break;
+			} else if (token.indexOf("@media", i) === i) {
+				state = "atBlock";
+				mediaRule = new CSSOM.<span class="apidocCodeKeywordSpan">CSSMediaRule</span>();
+				mediaRule.__starts = i;
+				i += "media".length;
+				buffer = "";
+				break;
+			} else if (token.indexOf("@host", i) === i) {
+				state = "hostRule-begin";
+				i += "host".length;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.CSSRule" id="apidoc.element.cssom.CSSRule">
+        function <span class="apidocSignatureSpan">cssom.</span>CSSRule
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CSSRule() {
+	this.parentRule = null;
+	this.parentStyleSheet = null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ */
+CSSOM.CSSDocumentRule = function CSSDocumentRule() {
+    CSSOM.CSSRule.call(this);
+    this.matcher = new CSSOM.MatcherList();
+    this.cssRules = [];
+};
+
+CSSOM.CSSDocumentRule.prototype = new CSSOM.<span class="apidocCodeKeywordSpan">CSSRule</span>();
+CSSOM.CSSDocumentRule.prototype.constructor = CSSOM.CSSDocumentRule;
+CSSOM.CSSDocumentRule.prototype.type = 10;
+//FIXME
+//CSSOM.CSSDocumentRule.prototype.insertRule = CSSStyleSheet.prototype.insertRule;
+//CSSOM.CSSDocumentRule.prototype.deleteRule = CSSStyleSheet.prototype.deleteRule;
+
+Object.defineProperty(CSSOM.CSSDocumentRule.prototype, "cssText", {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.CSSStyleDeclaration" id="apidoc.element.cssom.CSSStyleDeclaration">
+        function <span class="apidocSignatureSpan">cssom.</span>CSSStyleDeclaration
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CSSStyleDeclaration(){
+	this.length = 0;
+	this.parentRule = null;
+
+	// NON-STANDARD
+	this._importants = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+/**
+ * @constructor
+ * @see http://dev.w3.org/csswg/cssom/#css-font-face-rule
+ */
+CSSOM.CSSFontFaceRule = function CSSFontFaceRule() {
+	CSSOM.CSSRule.call(this);
+	this.style = new CSSOM.<span class="apidocCodeKeywordSpan">CSSStyleDeclaration</span>();
+	this.style.parentRule = this;
+};
+
+CSSOM.CSSFontFaceRule.prototype = new CSSOM.CSSRule();
+CSSOM.CSSFontFaceRule.prototype.constructor = CSSOM.CSSFontFaceRule;
+CSSOM.CSSFontFaceRule.prototype.type = 5;
+//FIXME
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.CSSStyleRule" id="apidoc.element.cssom.CSSStyleRule">
+        function <span class="apidocSignatureSpan">cssom.</span>CSSStyleRule
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CSSStyleRule() {
+	CSSOM.CSSRule.call(this);
+	this.selectorText = "";
+	this.style = new CSSOM.CSSStyleDeclaration();
+	this.style.parentRule = this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	var buffer = "";
+
+	var SIGNIFICANT_WHITESPACE = {
+		"selector": true,
+		"value": true
+	};
+
+	var styleRule = new CSSOM.<span class="apidocCodeKeywordSpan">CSSStyleRule</span>();
+	var name, priority="";
+
+	for (var character; (character = ruleText.charAt(i)); i++) {
+
+		switch (character) {
+
+		case " ":
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.CSSStyleSheet" id="apidoc.element.cssom.CSSStyleSheet">
+        function <span class="apidocSignatureSpan">cssom.</span>CSSStyleSheet
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CSSStyleSheet() {
+	CSSOM.StyleSheet.call(this);
+	this.cssRules = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @see http://dev.w3.org/csswg/cssom/#cssimportrule
+ * @see http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSImportRule
+ */
+CSSOM.CSSImportRule = function CSSImportRule() {
+	CSSOM.CSSRule.call(this);
+	this.href = "";
+	this.media = new CSSOM.MediaList();
+	this.styleSheet = new CSSOM.<span class="apidocCodeKeywordSpan">CSSStyleSheet</span>();
+};
+
+CSSOM.CSSImportRule.prototype = new CSSOM.CSSRule();
+CSSOM.CSSImportRule.prototype.constructor = CSSOM.CSSImportRule;
+CSSOM.CSSImportRule.prototype.type = 3;
+
+Object.defineProperty(CSSOM.CSSImportRule.prototype, "cssText", {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.MediaList" id="apidoc.element.cssom.MediaList">
+        function <span class="apidocSignatureSpan">cssom.</span>MediaList
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function MediaList(){
+	this.length = 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @constructor
+ * @see http://dev.w3.org/csswg/cssom/#cssimportrule
+ * @see http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSImportRule
+ */
+CSSOM.CSSImportRule = function CSSImportRule() {
+	CSSOM.CSSRule.call(this);
+	this.href = "";
+	this.media = new CSSOM.<span class="apidocCodeKeywordSpan">MediaList</span>();
+	this.styleSheet = new CSSOM.CSSStyleSheet();
+};
+
+CSSOM.CSSImportRule.prototype = new CSSOM.CSSRule();
+CSSOM.CSSImportRule.prototype.constructor = CSSOM.CSSImportRule;
+CSSOM.CSSImportRule.prototype.type = 3;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.StyleSheet" id="apidoc.element.cssom.StyleSheet">
+        function <span class="apidocSignatureSpan">cssom.</span>StyleSheet
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function StyleSheet() {
+	this.parentStyleSheet = null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*/
+CSSOM.CSSStyleSheet = function CSSStyleSheet() {
+	CSSOM.StyleSheet.call(this);
+	this.cssRules = [];
+};
+
+
+CSSOM.CSSStyleSheet.prototype = new CSSOM.<span class="apidocCodeKeywordSpan">StyleSheet</span>();
+CSSOM.CSSStyleSheet.prototype.constructor = CSSOM.CSSStyleSheet;
+
+
+/**
+* Used to insert a new rule into the style sheet. The new rule now becomes part of the cascade.
+*
+*   sheet = new Sheet("body {margin: 0}")
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.clone" id="apidoc.element.cssom.clone">
+        function <span class="apidocSignatureSpan">cssom.</span>clone
+        <span class="apidocSignatureSpan">(stylesheet)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function clone(stylesheet) {
+
+	var cloned = new CSSOM.CSSStyleSheet();
+
+	var rules = stylesheet.cssRules;
+	if (!rules) {
+		return cloned;
+	}
+
+	var RULE_TYPES = {
+		1: CSSOM.CSSStyleRule,
+		4: CSSOM.CSSMediaRule,
+		//3: CSSOM.CSSImportRule,
+		//5: CSSOM.CSSFontFaceRule,
+		//6: CSSOM.CSSPageRule,
+		8: CSSOM.CSSKeyframesRule,
+		9: CSSOM.CSSKeyframeRule
+	};
+
+	for (var i=0, rulesLength=rules.length; i &lt; rulesLength; i++) {
+		var rule = rules[i];
+		var ruleClone = cloned.cssRules[i] = new RULE_TYPES[rule.type]();
+
+		var style = rule.style;
+		if (style) {
+			var styleClone = ruleClone.style = new CSSOM.CSSStyleDeclaration();
+			for (var j=0, styleLength=style.length; j &lt; styleLength; j++) {
+				var name = styleClone[j] = style[j];
+				styleClone[name] = style[name];
+				styleClone._importants[name] = style.getPropertyPriority(name);
+			}
+			styleClone.length = style.length;
+		}
+
+		if (rule.hasOwnProperty('keyText')) {
+			ruleClone.keyText = rule.keyText;
+		}
+
+		if (rule.hasOwnProperty('selectorText')) {
+			ruleClone.selectorText = rule.selectorText;
+		}
+
+		if (rule.hasOwnProperty('mediaText')) {
+			ruleClone.mediaText = rule.mediaText;
+		}
+
+		if (rule.hasOwnProperty('cssRules')) {
+			ruleClone.cssRules = clone(rule).cssRules;
+		}
+	}
+
+	return cloned;
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.parse" id="apidoc.element.cssom.parse">
+        function <span class="apidocSignatureSpan">cssom.</span>parse
+        <span class="apidocSignatureSpan">(token)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parse(token) {
+
+	var i = 0;
+
+	<span class="apidocCodeCommentSpan">/**
+		"before-selector" or
+		"selector" or
+		"atRule" or
+		"atBlock" or
+		"before-name" or
+		"name" or
+		"before-value" or
+		"value"
+	*/
+</span>	var state = "before-selector";
+
+	var index;
+	var buffer = "";
+	var valueParenthesisDepth = 0;
+
+	var SIGNIFICANT_WHITESPACE = {
+		"selector": true,
+		"value": true,
+		"value-parenthesis": true,
+		"atRule": true,
+		"importRule-begin": true,
+		"importRule": true,
+		"atBlock": true,
+		'documentRule-begin': true
+	};
+
+	var styleSheet = new CSSOM.CSSStyleSheet();
+
+	// @type CSSStyleSheet|CSSMediaRule|CSSFontFaceRule|CSSKeyframesRule|CSSDocumentRule
+	var currentScope = styleSheet;
+
+	// @type CSSMediaRule|CSSKeyframesRule|CSSDocumentRule
+	var parentRule;
+
+	var name, priority="", styleRule, mediaRule, importRule, fontFaceRule, keyframesRule, documentRule, hostRule;
+
+	var atKeyframesRegExp = /@(-(?:\w+-)+)?keyframes/g;
+
+	var parseError = function(message) {
+		var lines = token.substring(0, i).split('\n');
+		var lineCount = lines.length;
+		var charCount = lines.pop().length + 1;
+		var error = new Error(message + ' (line ' + lineCount + ', char ' + charCount + ')');
+		error.line = lineCount;
+		/* jshint sub : true */
+		error['char'] = charCount;
+		error.styleSheet = styleSheet;
+		throw error;
+	};
+
+	for (var character; (character = token.charAt(i)); i++) {
+
+		switch (character) {
+
+		case " ":
+		case "\t":
+		case "\r":
+		case "\n":
+		case "\f":
+			if (SIGNIFICANT_WHITESPACE[state]) {
+				buffer += character;
+			}
+			break;
+
+		// String
+		case '"':
+			index = i + 1;
+			do {
+				index = token.indexOf('"', index) + 1;
+				if (!index) {
+					parseError('Unmatched "');
+				}
+			} while (token[index - 2] === '\\');
+			buffer += token.slice(i, index);
+			i = index - 1;
+			switch (state) {
+				case 'before-value':
+					state = 'value';
+					break;
+				case 'importRule-begin':
+					state = 'importRule';
+					break;
+			}
+			break;
+
+		case "'":
+			index = i + 1;
+			do {
+				index = token.indexOf("'", index) + 1;
+				if (!index) {
+					parseError("Unmatched '");
+				}
+			} while (token[index - 2] === '\\');
+			buffer += token.slice(i, index);
+			i = index - 1;
+			switch (state) {
+				case 'before-value':
+					state = 'value';
+					break;
+				case 'importRule-begin':
+					state = 'importRule';
+					break;
+			}
+			break;
+
+		// Comment
+		case "/":
+			if (token.charAt(i + 1) === "*") {
+				i += 2;
+				index = token.indexOf("*/", i);
+				if (index === -1) {
+					parseError("Missing */");
+				} else {
+					i = index + 1;
+				}
+			} else {
+				buffer += character;
+			}
+			if (state === "importRule-begin") {
+				buffer += " ";
+				state = "importRule";
+			}
+			break;
+
+		// At-rule
+		case "@":
+			if (token.indexOf("@-moz-document", i) === i) {
+				state = "documentRule-begin";
+				documentRule = new CSSOM.CSSDocumentRule();
+				documentRule.__starts = i;
+				i += "-moz-document".length;
+				buffer = "";
+				break;
+			} else if (token.indexOf("@media", i) === i) {
+				state = "atBlock";
+				mediaRule = new CSSOM.CSSMediaRule();
+				mediaRule.__starts = i;
+				i += "media".length;
+				buffer = "";
+				break;
+			} else if (token.indexOf("@host", i) === i) {
+				state = "hostRule-begin";
+				i += "host".length;
+				hostRule = new CSSOM.CSSHostRule();
+				hostRule.__starts = i;
+				buffer = "";
+				break;
+			} else if (token.indexOf("@import", i) === i) {
+				state = "importRule-begin";
+				i += "import".length;
+				buffer += "@import";
+				break;
+			} else if (token.indexOf("@font-face", i) === i) {
+				state = "fontFaceRule-begin";
+				i += "font-face".length;
+				fontFaceRule = new CSSOM.CSSFontFaceRule();
+				fontFaceRule.__starts = i;
+				buffer = "";
+				break;
+			} else {
+				atKeyframesRegExp.lastIndex = i;
+				var matchKeyframes = atKeyframesRegExp.exec(token);
+				if (matchKeyframes &amp;&amp; matchKeyframes.index === i) {
+					state = "keyframesRule-begin";
+					keyframesRule = new CSSOM.CSSKeyframesRule();
+					keyframesRule.__starts = i;
+					keyframesRule._vendorPrefix = matchKeyframes[1]; // Will come out as undefined if no prefix was found
+					i += matchKeyframes[0].length - 1; ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+# CSSOM
+
+CSSOM.js is a CSS parser written in pure JavaScript. It also a partial implementation of [CSS Object Model](http://dev.w3.org/csswg
+/cssom/).
+
+CSSOM.<span class="apidocCodeKeywordSpan">parse</span>("body {color: black}")
+-&gt; {
+  cssRules: [
+    {
+      selectorText: "body",
+      style: {
+        0: "color",
+        color: "black",
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cssom.CSSDocumentRule" id="apidoc.module.cssom.CSSDocumentRule">module cssom.CSSDocumentRule</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.CSSDocumentRule.CSSDocumentRule" id="apidoc.element.cssom.CSSDocumentRule.CSSDocumentRule">
+        function <span class="apidocSignatureSpan">cssom.</span>CSSDocumentRule
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CSSDocumentRule() {
+    CSSOM.CSSRule.call(this);
+    this.matcher = new CSSOM.MatcherList();
+    this.cssRules = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			}
+			break;
+
+		// At-rule
+		case "@":
+			if (token.indexOf("@-moz-document", i) === i) {
+				state = "documentRule-begin";
+				documentRule = new CSSOM.<span class="apidocCodeKeywordSpan">CSSDocumentRule</span>();
+				documentRule.__starts = i;
+				i += "-moz-document".length;
+				buffer = "";
+				break;
+			} else if (token.indexOf("@media", i) === i) {
+				state = "atBlock";
+				mediaRule = new CSSOM.CSSMediaRule();
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cssom.CSSFontFaceRule" id="apidoc.module.cssom.CSSFontFaceRule">module cssom.CSSFontFaceRule</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.CSSFontFaceRule.CSSFontFaceRule" id="apidoc.element.cssom.CSSFontFaceRule.CSSFontFaceRule">
+        function <span class="apidocSignatureSpan">cssom.</span>CSSFontFaceRule
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CSSFontFaceRule() {
+	CSSOM.CSSRule.call(this);
+	this.style = new CSSOM.CSSStyleDeclaration();
+	this.style.parentRule = this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+				state = "importRule-begin";
+				i += "import".length;
+				buffer += "@import";
+				break;
+			} else if (token.indexOf("@font-face", i) === i) {
+				state = "fontFaceRule-begin";
+				i += "font-face".length;
+				fontFaceRule = new CSSOM.<span class="apidocCodeKeywordSpan">CSSFontFaceRule</span>();
+				fontFaceRule.__starts = i;
+				buffer = "";
+				break;
+			} else {
+				atKeyframesRegExp.lastIndex = i;
+				var matchKeyframes = atKeyframesRegExp.exec(token);
+				if (matchKeyframes &amp;&amp; matchKeyframes.index === i) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cssom.CSSHostRule" id="apidoc.module.cssom.CSSHostRule">module cssom.CSSHostRule</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.CSSHostRule.CSSHostRule" id="apidoc.element.cssom.CSSHostRule.CSSHostRule">
+        function <span class="apidocSignatureSpan">cssom.</span>CSSHostRule
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CSSHostRule() {
+	CSSOM.CSSRule.call(this);
+	this.cssRules = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+				mediaRule.__starts = i;
+				i += "media".length;
+				buffer = "";
+				break;
+			} else if (token.indexOf("@host", i) === i) {
+				state = "hostRule-begin";
+				i += "host".length;
+				hostRule = new CSSOM.<span class="apidocCodeKeywordSpan">CSSHostRule</span>();
+				hostRule.__starts = i;
+				buffer = "";
+				break;
+			} else if (token.indexOf("@import", i) === i) {
+				state = "importRule-begin";
+				i += "import".length;
+				buffer += "@import";
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cssom.CSSImportRule" id="apidoc.module.cssom.CSSImportRule">module cssom.CSSImportRule</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.CSSImportRule.CSSImportRule" id="apidoc.element.cssom.CSSImportRule.CSSImportRule">
+        function <span class="apidocSignatureSpan">cssom.</span>CSSImportRule
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CSSImportRule() {
+	CSSOM.CSSRule.call(this);
+	this.href = "";
+	this.media = new CSSOM.MediaList();
+	this.styleSheet = new CSSOM.CSSStyleSheet();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+					state = "before-name";
+					break;
+				case "atRule":
+					buffer = "";
+					state = "before-selector";
+					break;
+				case "importRule":
+					importRule = new CSSOM.<span class="apidocCodeKeywordSpan">CSSImportRule</span>();
+					importRule.parentStyleSheet = importRule.styleSheet.parentStyleSheet = styleSheet;
+					importRule.cssText = buffer + character;
+					styleSheet.cssRules.push(importRule);
+					buffer = "";
+					state = "before-selector";
+					break;
+				default:
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cssom.CSSImportRule.prototype" id="apidoc.module.cssom.CSSImportRule.prototype">module cssom.CSSImportRule.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.CSSImportRule.prototype.constructor" id="apidoc.element.cssom.CSSImportRule.prototype.constructor">
+        function <span class="apidocSignatureSpan">cssom.CSSImportRule.prototype.</span>constructor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CSSImportRule() {
+	CSSOM.CSSRule.call(this);
+	this.href = "";
+	this.media = new CSSOM.MediaList();
+	this.styleSheet = new CSSOM.CSSStyleSheet();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cssom.CSSKeyframeRule" id="apidoc.module.cssom.CSSKeyframeRule">module cssom.CSSKeyframeRule</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.CSSKeyframeRule.CSSKeyframeRule" id="apidoc.element.cssom.CSSKeyframeRule.CSSKeyframeRule">
+        function <span class="apidocSignatureSpan">cssom.</span>CSSKeyframeRule
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CSSKeyframeRule() {
+	CSSOM.CSSRule.call(this);
+	this.keyText = '';
+	this.style = new CSSOM.CSSStyleDeclaration();
+	this.style.parentRule = this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+					keyframesRule.parentRule = parentRule;
+				}
+				keyframesRule.parentStyleSheet = styleSheet;
+				currentScope = parentRule = keyframesRule;
+				buffer = "";
+				state = "keyframeRule-begin";
+			} else if (state === "keyframeRule-begin") {
+				styleRule = new CSSOM.<span class="apidocCodeKeywordSpan">CSSKeyframeRule</span>();
+				styleRule.keyText = buffer.trim();
+				styleRule.__starts = i;
+				buffer = "";
+				state = "before-name";
+			} else if (state === "documentRule-begin") {
+				// FIXME: what if this '{' is in the url text of the match function?
+				documentRule.matcher.matcherText = buffer.trim();
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cssom.CSSKeyframesRule" id="apidoc.module.cssom.CSSKeyframesRule">module cssom.CSSKeyframesRule</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.CSSKeyframesRule.CSSKeyframesRule" id="apidoc.element.cssom.CSSKeyframesRule.CSSKeyframesRule">
+        function <span class="apidocSignatureSpan">cssom.</span>CSSKeyframesRule
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CSSKeyframesRule() {
+	CSSOM.CSSRule.call(this);
+	this.name = '';
+	this.cssRules = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+				buffer = "";
+				break;
+			} else {
+				atKeyframesRegExp.lastIndex = i;
+				var matchKeyframes = atKeyframesRegExp.exec(token);
+				if (matchKeyframes &amp;&amp; matchKeyframes.index === i) {
+					state = "keyframesRule-begin";
+					keyframesRule = new CSSOM.<span class="apidocCodeKeywordSpan">CSSKeyframesRule</span>();
+					keyframesRule.__starts = i;
+					keyframesRule._vendorPrefix = matchKeyframes[1]; // Will come out as undefined if no prefix was found
+					i += matchKeyframes[0].length - 1;
+					buffer = "";
+					break;
+				} else if (state === "selector") {
+					state = "atRule";
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cssom.CSSMediaRule" id="apidoc.module.cssom.CSSMediaRule">module cssom.CSSMediaRule</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.CSSMediaRule.CSSMediaRule" id="apidoc.element.cssom.CSSMediaRule.CSSMediaRule">
+        function <span class="apidocSignatureSpan">cssom.</span>CSSMediaRule
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CSSMediaRule() {
+	CSSOM.CSSRule.call(this);
+	this.media = new CSSOM.MediaList();
+	this.cssRules = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+				documentRule = new CSSOM.CSSDocumentRule();
+				documentRule.__starts = i;
+				i += "-moz-document".length;
+				buffer = "";
+				break;
+			} else if (token.indexOf("@media", i) === i) {
+				state = "atBlock";
+				mediaRule = new CSSOM.<span class="apidocCodeKeywordSpan">CSSMediaRule</span>();
+				mediaRule.__starts = i;
+				i += "media".length;
+				buffer = "";
+				break;
+			} else if (token.indexOf("@host", i) === i) {
+				state = "hostRule-begin";
+				i += "host".length;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cssom.CSSMediaRule.prototype" id="apidoc.module.cssom.CSSMediaRule.prototype">module cssom.CSSMediaRule.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.CSSMediaRule.prototype.constructor" id="apidoc.element.cssom.CSSMediaRule.prototype.constructor">
+        function <span class="apidocSignatureSpan">cssom.CSSMediaRule.prototype.</span>constructor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CSSMediaRule() {
+	CSSOM.CSSRule.call(this);
+	this.media = new CSSOM.MediaList();
+	this.cssRules = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cssom.CSSRule" id="apidoc.module.cssom.CSSRule">module cssom.CSSRule</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.CSSRule.CSSRule" id="apidoc.element.cssom.CSSRule.CSSRule">
+        function <span class="apidocSignatureSpan">cssom.</span>CSSRule
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CSSRule() {
+	this.parentRule = null;
+	this.parentStyleSheet = null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ */
+CSSOM.CSSDocumentRule = function CSSDocumentRule() {
+    CSSOM.CSSRule.call(this);
+    this.matcher = new CSSOM.MatcherList();
+    this.cssRules = [];
+};
+
+CSSOM.CSSDocumentRule.prototype = new CSSOM.<span class="apidocCodeKeywordSpan">CSSRule</span>();
+CSSOM.CSSDocumentRule.prototype.constructor = CSSOM.CSSDocumentRule;
+CSSOM.CSSDocumentRule.prototype.type = 10;
+//FIXME
+//CSSOM.CSSDocumentRule.prototype.insertRule = CSSStyleSheet.prototype.insertRule;
+//CSSOM.CSSDocumentRule.prototype.deleteRule = CSSStyleSheet.prototype.deleteRule;
+
+Object.defineProperty(CSSOM.CSSDocumentRule.prototype, "cssText", {
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cssom.CSSRule.prototype" id="apidoc.module.cssom.CSSRule.prototype">module cssom.CSSRule.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.CSSRule.prototype.constructor" id="apidoc.element.cssom.CSSRule.prototype.constructor">
+        function <span class="apidocSignatureSpan">cssom.CSSRule.prototype.</span>constructor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CSSRule() {
+	this.parentRule = null;
+	this.parentStyleSheet = null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cssom.CSSStyleDeclaration" id="apidoc.module.cssom.CSSStyleDeclaration">module cssom.CSSStyleDeclaration</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.CSSStyleDeclaration.CSSStyleDeclaration" id="apidoc.element.cssom.CSSStyleDeclaration.CSSStyleDeclaration">
+        function <span class="apidocSignatureSpan">cssom.</span>CSSStyleDeclaration
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CSSStyleDeclaration(){
+	this.length = 0;
+	this.parentRule = null;
+
+	// NON-STANDARD
+	this._importants = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+/**
+ * @constructor
+ * @see http://dev.w3.org/csswg/cssom/#css-font-face-rule
+ */
+CSSOM.CSSFontFaceRule = function CSSFontFaceRule() {
+	CSSOM.CSSRule.call(this);
+	this.style = new CSSOM.<span class="apidocCodeKeywordSpan">CSSStyleDeclaration</span>();
+	this.style.parentRule = this;
+};
+
+CSSOM.CSSFontFaceRule.prototype = new CSSOM.CSSRule();
+CSSOM.CSSFontFaceRule.prototype.constructor = CSSOM.CSSFontFaceRule;
+CSSOM.CSSFontFaceRule.prototype.type = 5;
+//FIXME
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cssom.CSSStyleDeclaration.prototype" id="apidoc.module.cssom.CSSStyleDeclaration.prototype">module cssom.CSSStyleDeclaration.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.CSSStyleDeclaration.prototype.constructor" id="apidoc.element.cssom.CSSStyleDeclaration.prototype.constructor">
+        function <span class="apidocSignatureSpan">cssom.CSSStyleDeclaration.prototype.</span>constructor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CSSStyleDeclaration(){
+	this.length = 0;
+	this.parentRule = null;
+
+	// NON-STANDARD
+	this._importants = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.CSSStyleDeclaration.prototype.getPropertyCSSValue" id="apidoc.element.cssom.CSSStyleDeclaration.prototype.getPropertyCSSValue">
+        function <span class="apidocSignatureSpan">cssom.CSSStyleDeclaration.prototype.</span>getPropertyCSSValue
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getPropertyCSSValue = function () {
+		//FIXME
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.CSSStyleDeclaration.prototype.getPropertyPriority" id="apidoc.element.cssom.CSSStyleDeclaration.prototype.getPropertyPriority">
+        function <span class="apidocSignatureSpan">cssom.CSSStyleDeclaration.prototype.</span>getPropertyPriority
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getPropertyPriority = function (name) {
+		return this._importants[name] || "";
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+	// Doesn't work in IE &lt; 9
+	get cssText(){
+		var properties = [];
+		for (var i=0, length=this.length; i &lt; length; ++i) {
+			var name = this[i];
+			var value = this.getPropertyValue(name);
+			var priority = this.<span class="apidocCodeKeywordSpan">getPropertyPriority</span>(name);
+			if (priority) {
+				priority = " !" + priority;
+			}
+			properties[i] = name + ": " + value + priority + ";";
+		}
+		return properties.join(" ");
+	},
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.CSSStyleDeclaration.prototype.getPropertyShorthand" id="apidoc.element.cssom.CSSStyleDeclaration.prototype.getPropertyShorthand">
+        function <span class="apidocSignatureSpan">cssom.CSSStyleDeclaration.prototype.</span>getPropertyShorthand
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getPropertyShorthand = function () {
+		//FIXME
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	getPropertyPriority: function(name) {
+		return this._importants[name] || "";
+	},
+
+
+	/**
+	 *   element.style.overflow = "auto"
+	 *   element.style.<span class="apidocCodeKeywordSpan">getPropertyShorthand</span>("overflow-x")
+	 *   -&gt; "overflow"
+	 */
+	getPropertyShorthand: function() {
+		//FIXME
+	},
+
+	isPropertyImplicit: function() {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.CSSStyleDeclaration.prototype.getPropertyValue" id="apidoc.element.cssom.CSSStyleDeclaration.prototype.getPropertyValue">
+        function <span class="apidocSignatureSpan">cssom.CSSStyleDeclaration.prototype.</span>getPropertyValue
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getPropertyValue = function (name) {
+		return this[name] || "";
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	},
+
+	// Doesn't work in IE &lt; 9
+	get cssText(){
+		var properties = [];
+		for (var i=0, length=this.length; i &lt; length; ++i) {
+			var name = this[i];
+			var value = this.<span class="apidocCodeKeywordSpan">getPropertyValue</span>(name);
+			var priority = this.getPropertyPriority(name);
+			if (priority) {
+				priority = " !" + priority;
+			}
+			properties[i] = name + ": " + value + priority + ";";
+		}
+		return properties.join(" ");
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.CSSStyleDeclaration.prototype.isPropertyImplicit" id="apidoc.element.cssom.CSSStyleDeclaration.prototype.isPropertyImplicit">
+        function <span class="apidocSignatureSpan">cssom.CSSStyleDeclaration.prototype.</span>isPropertyImplicit
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isPropertyImplicit = function () {
+		//FIXME
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.CSSStyleDeclaration.prototype.removeProperty" id="apidoc.element.cssom.CSSStyleDeclaration.prototype.removeProperty">
+        function <span class="apidocSignatureSpan">cssom.CSSStyleDeclaration.prototype.</span>removeProperty
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeProperty = function (name) {
+		if (!(name in this)) {
+			return "";
+		}
+		var index = Array.prototype.indexOf.call(this, name);
+		if (index &lt; 0) {
+			return "";
+		}
+		var prevValue = this[name];
+		this[name] = "";
+
+		// That's what WebKit and Opera do
+		Array.prototype.splice.call(this, index, 1);
+
+		// That's what Firefox does
+		//this[index] = ""
+
+		return prevValue;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.CSSStyleDeclaration.prototype.setProperty" id="apidoc.element.cssom.CSSStyleDeclaration.prototype.setProperty">
+        function <span class="apidocSignatureSpan">cssom.CSSStyleDeclaration.prototype.</span>setProperty
+        <span class="apidocSignatureSpan">(name, value, priority)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setProperty = function (name, value, priority) {
+		if (this[name]) {
+			// Property already exist. Overwrite it.
+			var index = Array.prototype.indexOf.call(this, name);
+			if (index &lt; 0) {
+				this[this.length] = name;
+				this.length++;
+			}
+		} else {
+			// New property.
+			this[this.length] = name;
+			this.length++;
+		}
+		this[name] = value + "";
+		this._importants[name] = priority;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		Array.prototype.splice.call(this, 0, this.length);
+		this._importants = {};
+
+		var dummyRule = CSSOM.parse('#bogus{' + text + '}').cssRules[0].style;
+		var length = dummyRule.length;
+		for (i = 0; i &lt; length; ++i) {
+			name = dummyRule[i];
+			this.<span class="apidocCodeKeywordSpan">setProperty</span>(dummyRule[i], dummyRule.getPropertyValue(name), dummyRule.getPropertyPriority
+(name));
+		}
+	}
+};
+
+
+//.CommonJS
+exports.CSSStyleDeclaration = CSSOM.CSSStyleDeclaration;
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cssom.CSSStyleRule" id="apidoc.module.cssom.CSSStyleRule">module cssom.CSSStyleRule</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.CSSStyleRule.CSSStyleRule" id="apidoc.element.cssom.CSSStyleRule.CSSStyleRule">
+        function <span class="apidocSignatureSpan">cssom.</span>CSSStyleRule
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CSSStyleRule() {
+	CSSOM.CSSRule.call(this);
+	this.selectorText = "";
+	this.style = new CSSOM.CSSStyleDeclaration();
+	this.style.parentRule = this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	var buffer = "";
+
+	var SIGNIFICANT_WHITESPACE = {
+		"selector": true,
+		"value": true
+	};
+
+	var styleRule = new CSSOM.<span class="apidocCodeKeywordSpan">CSSStyleRule</span>();
+	var name, priority="";
+
+	for (var character; (character = ruleText.charAt(i)); i++) {
+
+		switch (character) {
+
+		case " ":
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.CSSStyleRule.parse" id="apidoc.element.cssom.CSSStyleRule.parse">
+        function <span class="apidocSignatureSpan">cssom.CSSStyleRule.</span>parse
+        <span class="apidocSignatureSpan">(ruleText)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parse = function (ruleText) {
+	var i = 0;
+	var state = "selector";
+	var index;
+	var j = i;
+	var buffer = "";
+
+	var SIGNIFICANT_WHITESPACE = {
+		"selector": true,
+		"value": true
+	};
+
+	var styleRule = new CSSOM.CSSStyleRule();
+	var name, priority="";
+
+	for (var character; (character = ruleText.charAt(i)); i++) {
+
+		switch (character) {
+
+		case " ":
+		case "\t":
+		case "\r":
+		case "\n":
+		case "\f":
+			if (SIGNIFICANT_WHITESPACE[state]) {
+				// Squash 2 or more white-spaces in the row into 1
+				switch (ruleText.charAt(i - 1)) {
+					case " ":
+					case "\t":
+					case "\r":
+					case "\n":
+					case "\f":
+						break;
+					default:
+						buffer += " ";
+						break;
+				}
+			}
+			break;
+
+		// String
+		case '"':
+			j = i + 1;
+			index = ruleText.indexOf('"', j) + 1;
+			if (!index) {
+				throw '" is missing';
+			}
+			buffer += ruleText.slice(i, index);
+			i = index - 1;
+			break;
+
+		case "'":
+			j = i + 1;
+			index = ruleText.indexOf("'", j) + 1;
+			if (!index) {
+				throw "' is missing";
+			}
+			buffer += ruleText.slice(i, index);
+			i = index - 1;
+			break;
+
+		// Comment
+		case "/":
+			if (ruleText.charAt(i + 1) === "*") {
+				i += 2;
+				index = ruleText.indexOf("*/", i);
+				if (index === -1) {
+					throw new SyntaxError("Missing */");
+				} else {
+					i = index + 1;
+				}
+			} else {
+				buffer += character;
+			}
+			break;
+
+		case "{":
+			if (state === "selector") {
+				styleRule.selectorText = buffer.trim();
+				buffer = "";
+				state = "name";
+			}
+			break;
+
+		case ":":
+			if (state === "name") {
+				name = buffer.trim();
+				buffer = "";
+				state = "value";
+			} else {
+				buffer += character;
+			}
+			break;
+
+		case "!":
+			if (state === "value" &amp;&amp; ruleText.indexOf("!important", i) === i) {
+				priority = "important";
+				i += "important".length;
+			} else {
+				buffer += character;
+			}
+			break;
+
+		case ";":
+			if (state === "value") {
+				styleRule.style.setProperty(name, buffer.trim(), priority);
+				priority = "";
+				buffer = "";
+				state = "name";
+			} else {
+				buffer += character;
+			}
+			break;
+
+		case "}":
+			if (state === "value") {
+				styleRule.style.setProperty(name, buffer.trim(), priority);
+				priority = "";
+				buffer = "";
+			} else if (state === "name") {
+				break;
+			} else {
+				buffer += character;
+			}
+			state = "selector";
+			break;
+
+		default:
+			buffer += character;
+			break;
+
+		}
+	}
+
+	return styleRule;
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+# CSSOM
+
+CSSOM.js is a CSS parser written in pure JavaScript. It also a partial implementation of [CSS Object Model](http://dev.w3.org/csswg
+/cssom/).
+
+CSSOM.<span class="apidocCodeKeywordSpan">parse</span>("body {color: black}")
+-&gt; {
+  cssRules: [
+    {
+      selectorText: "body",
+      style: {
+        0: "color",
+        color: "black",
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cssom.CSSStyleRule.prototype" id="apidoc.module.cssom.CSSStyleRule.prototype">module cssom.CSSStyleRule.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.CSSStyleRule.prototype.constructor" id="apidoc.element.cssom.CSSStyleRule.prototype.constructor">
+        function <span class="apidocSignatureSpan">cssom.CSSStyleRule.prototype.</span>constructor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CSSStyleRule() {
+	CSSOM.CSSRule.call(this);
+	this.selectorText = "";
+	this.style = new CSSOM.CSSStyleDeclaration();
+	this.style.parentRule = this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cssom.CSSStyleSheet" id="apidoc.module.cssom.CSSStyleSheet">module cssom.CSSStyleSheet</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.CSSStyleSheet.CSSStyleSheet" id="apidoc.element.cssom.CSSStyleSheet.CSSStyleSheet">
+        function <span class="apidocSignatureSpan">cssom.</span>CSSStyleSheet
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CSSStyleSheet() {
+	CSSOM.StyleSheet.call(this);
+	this.cssRules = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @see http://dev.w3.org/csswg/cssom/#cssimportrule
+ * @see http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSImportRule
+ */
+CSSOM.CSSImportRule = function CSSImportRule() {
+	CSSOM.CSSRule.call(this);
+	this.href = "";
+	this.media = new CSSOM.MediaList();
+	this.styleSheet = new CSSOM.<span class="apidocCodeKeywordSpan">CSSStyleSheet</span>();
+};
+
+CSSOM.CSSImportRule.prototype = new CSSOM.CSSRule();
+CSSOM.CSSImportRule.prototype.constructor = CSSOM.CSSImportRule;
+CSSOM.CSSImportRule.prototype.type = 3;
+
+Object.defineProperty(CSSOM.CSSImportRule.prototype, "cssText", {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cssom.CSSStyleSheet.prototype" id="apidoc.module.cssom.CSSStyleSheet.prototype">module cssom.CSSStyleSheet.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.CSSStyleSheet.prototype.constructor" id="apidoc.element.cssom.CSSStyleSheet.prototype.constructor">
+        function <span class="apidocSignatureSpan">cssom.CSSStyleSheet.prototype.</span>constructor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CSSStyleSheet() {
+	CSSOM.StyleSheet.call(this);
+	this.cssRules = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.CSSStyleSheet.prototype.deleteRule" id="apidoc.element.cssom.CSSStyleSheet.prototype.deleteRule">
+        function <span class="apidocSignatureSpan">cssom.CSSStyleSheet.prototype.</span>deleteRule
+        <span class="apidocSignatureSpan">(index)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">deleteRule = function (index) {
+	if (index &lt; 0 || index &gt;= this.cssRules.length) {
+		throw new RangeError("INDEX_SIZE_ERR");
+	}
+	this.cssRules.splice(index, 1);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+/**
+ * Used to delete a rule from the style sheet.
+ *
+ *   sheet = new Sheet("img{border:none} body{margin:0}")
+ *   sheet.toString()
+ *   -&gt; "img{border:none;}body{margin:0;}"
+ *   sheet.<span class="apidocCodeKeywordSpan">deleteRule</span>(0)
+ *   sheet.toString()
+ *   -&gt; "body{margin:0;}"
+ *
+ * @param {number} index within the style sheet's rule list of the rule to remove.
+ * @see http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleSheet-deleteRule
+ */
+CSSOM.CSSStyleSheet.prototype.deleteRule = function(index) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.CSSStyleSheet.prototype.insertRule" id="apidoc.element.cssom.CSSStyleSheet.prototype.insertRule">
+        function <span class="apidocSignatureSpan">cssom.CSSStyleSheet.prototype.</span>insertRule
+        <span class="apidocSignatureSpan">(rule, index)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">insertRule = function (rule, index) {
+	if (index &lt; 0 || index &gt; this.cssRules.length) {
+		throw new RangeError("INDEX_SIZE_ERR");
+	}
+	var cssRule = CSSOM.parse(rule).cssRules[0];
+	cssRule.parentStyleSheet = this;
+	this.cssRules.splice(index, 0, cssRule);
+	return index;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+/**
+* Used to insert a new rule into the style sheet. The new rule now becomes part of the cascade.
+*
+*   sheet = new Sheet("body {margin: 0}")
+*   sheet.toString()
+*   -&gt; "body{margin:0;}"
+*   sheet.<span class="apidocCodeKeywordSpan">insertRule</span>("img {border: none}", 0)
+*   -&gt; 0
+*   sheet.toString()
+*   -&gt; "img{border:none;}body{margin:0;}"
+*
+* @param {string} rule
+* @param {number} index
+* @see http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleSheet-insertRule
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.CSSStyleSheet.prototype.toString" id="apidoc.element.cssom.CSSStyleSheet.prototype.toString">
+        function <span class="apidocSignatureSpan">cssom.CSSStyleSheet.prototype.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+	var result = "";
+	var rules = this.cssRules;
+	for (var i=0; i&lt;rules.length; i++) {
+		result += rules[i].cssText + "\n";
+	}
+	return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+CSSOM.CSSStyleSheet.prototype.constructor = CSSOM.CSSStyleSheet;
+
+
+/**
+* Used to insert a new rule into the style sheet. The new rule now becomes part of the cascade.
+*
+*   sheet = new Sheet("body {margin: 0}")
+*   sheet.<span class="apidocCodeKeywordSpan">toString</span>()
+*   -&gt; "body{margin:0;}"
+*   sheet.insertRule("img {border: none}", 0)
+*   -&gt; 0
+*   sheet.toString()
+*   -&gt; "img{border:none;}body{margin:0;}"
+*
+* @param {string} rule
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cssom.CSSValue" id="apidoc.module.cssom.CSSValue">module cssom.CSSValue</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.CSSValue.CSSValue" id="apidoc.element.cssom.CSSValue.CSSValue">
+        function <span class="apidocSignatureSpan">cssom.</span>CSSValue
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CSSValue() {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*
+*/
+CSSOM.CSSValueExpression = function CSSValueExpression(token, idx) {
+	this._token = token;
+	this._idx = idx;
+};
+
+CSSOM.CSSValueExpression.prototype = new CSSOM.<span class="apidocCodeKeywordSpan">CSSValue</span>();
+CSSOM.CSSValueExpression.prototype.constructor = CSSOM.CSSValueExpression;
+
+/**
+* parse css expression() value
+*
+* @return {Object}
+*         - error:
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cssom.CSSValueExpression" id="apidoc.module.cssom.CSSValueExpression">module cssom.CSSValueExpression</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.CSSValueExpression.CSSValueExpression" id="apidoc.element.cssom.CSSValueExpression.CSSValueExpression">
+        function <span class="apidocSignatureSpan">cssom.</span>CSSValueExpression
+        <span class="apidocSignatureSpan">(token, idx)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CSSValueExpression(token, idx) {
+	this._token = token;
+	this._idx = idx;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			}
+			break;
+
+		case "(":
+			if (state === 'value') {
+				// ie css expression mode
+				if (buffer.trim() === 'expression') {
+					var info = (new CSSOM.<span class="apidocCodeKeywordSpan">CSSValueExpression</span>(token, i)).parse();
+
+					if (info.error) {
+						parseError(info.error);
+					} else {
+						buffer += info.expression;
+						i = info.idx;
+					}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cssom.MatcherList" id="apidoc.module.cssom.MatcherList">module cssom.MatcherList</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.MatcherList.MatcherList" id="apidoc.element.cssom.MatcherList.MatcherList">
+        function <span class="apidocSignatureSpan">cssom.</span>MatcherList
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function MatcherList(){
+    this.length = 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+/**
+ * @constructor
+ * @see https://developer.mozilla.org/en/CSS/@-moz-document
+ */
+CSSOM.CSSDocumentRule = function CSSDocumentRule() {
+    CSSOM.CSSRule.call(this);
+    this.matcher = new CSSOM.<span class="apidocCodeKeywordSpan">MatcherList</span>();
+    this.cssRules = [];
+};
+
+CSSOM.CSSDocumentRule.prototype = new CSSOM.CSSRule();
+CSSOM.CSSDocumentRule.prototype.constructor = CSSOM.CSSDocumentRule;
+CSSOM.CSSDocumentRule.prototype.type = 10;
+//FIXME
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cssom.MediaList" id="apidoc.module.cssom.MediaList">module cssom.MediaList</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.MediaList.MediaList" id="apidoc.element.cssom.MediaList.MediaList">
+        function <span class="apidocSignatureSpan">cssom.</span>MediaList
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function MediaList(){
+	this.length = 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @constructor
+ * @see http://dev.w3.org/csswg/cssom/#cssimportrule
+ * @see http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSImportRule
+ */
+CSSOM.CSSImportRule = function CSSImportRule() {
+	CSSOM.CSSRule.call(this);
+	this.href = "";
+	this.media = new CSSOM.<span class="apidocCodeKeywordSpan">MediaList</span>();
+	this.styleSheet = new CSSOM.CSSStyleSheet();
+};
+
+CSSOM.CSSImportRule.prototype = new CSSOM.CSSRule();
+CSSOM.CSSImportRule.prototype.constructor = CSSOM.CSSImportRule;
+CSSOM.CSSImportRule.prototype.type = 3;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cssom.MediaList.prototype" id="apidoc.module.cssom.MediaList.prototype">module cssom.MediaList.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.MediaList.prototype.appendMedium" id="apidoc.element.cssom.MediaList.prototype.appendMedium">
+        function <span class="apidocSignatureSpan">cssom.MediaList.prototype.</span>appendMedium
+        <span class="apidocSignatureSpan">(medium)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">appendMedium = function (medium) {
+		if (Array.prototype.indexOf.call(this, medium) === -1) {
+			this[this.length] = medium;
+			this.length++;
+		}
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.MediaList.prototype.constructor" id="apidoc.element.cssom.MediaList.prototype.constructor">
+        function <span class="apidocSignatureSpan">cssom.MediaList.prototype.</span>constructor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function MediaList(){
+	this.length = 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.MediaList.prototype.deleteMedium" id="apidoc.element.cssom.MediaList.prototype.deleteMedium">
+        function <span class="apidocSignatureSpan">cssom.MediaList.prototype.</span>deleteMedium
+        <span class="apidocSignatureSpan">(medium)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">deleteMedium = function (medium) {
+		var index = Array.prototype.indexOf.call(this, medium);
+		if (index !== -1) {
+			Array.prototype.splice.call(this, index, 1);
+		}
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cssom.StyleSheet" id="apidoc.module.cssom.StyleSheet">module cssom.StyleSheet</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.StyleSheet.StyleSheet" id="apidoc.element.cssom.StyleSheet.StyleSheet">
+        function <span class="apidocSignatureSpan">cssom.</span>StyleSheet
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function StyleSheet() {
+	this.parentStyleSheet = null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*/
+CSSOM.CSSStyleSheet = function CSSStyleSheet() {
+	CSSOM.StyleSheet.call(this);
+	this.cssRules = [];
+};
+
+
+CSSOM.CSSStyleSheet.prototype = new CSSOM.<span class="apidocCodeKeywordSpan">StyleSheet</span>();
+CSSOM.CSSStyleSheet.prototype.constructor = CSSOM.CSSStyleSheet;
+
+
+/**
+* Used to insert a new rule into the style sheet. The new rule now becomes part of the cascade.
+*
+*   sheet = new Sheet("body {margin: 0}")
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cssom.clone" id="apidoc.module.cssom.clone">module cssom.clone</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.clone.clone" id="apidoc.element.cssom.clone.clone">
+        function <span class="apidocSignatureSpan">cssom.</span>clone
+        <span class="apidocSignatureSpan">(stylesheet)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function clone(stylesheet) {
+
+	var cloned = new CSSOM.CSSStyleSheet();
+
+	var rules = stylesheet.cssRules;
+	if (!rules) {
+		return cloned;
+	}
+
+	var RULE_TYPES = {
+		1: CSSOM.CSSStyleRule,
+		4: CSSOM.CSSMediaRule,
+		//3: CSSOM.CSSImportRule,
+		//5: CSSOM.CSSFontFaceRule,
+		//6: CSSOM.CSSPageRule,
+		8: CSSOM.CSSKeyframesRule,
+		9: CSSOM.CSSKeyframeRule
+	};
+
+	for (var i=0, rulesLength=rules.length; i &lt; rulesLength; i++) {
+		var rule = rules[i];
+		var ruleClone = cloned.cssRules[i] = new RULE_TYPES[rule.type]();
+
+		var style = rule.style;
+		if (style) {
+			var styleClone = ruleClone.style = new CSSOM.CSSStyleDeclaration();
+			for (var j=0, styleLength=style.length; j &lt; styleLength; j++) {
+				var name = styleClone[j] = style[j];
+				styleClone[name] = style[name];
+				styleClone._importants[name] = style.getPropertyPriority(name);
+			}
+			styleClone.length = style.length;
+		}
+
+		if (rule.hasOwnProperty('keyText')) {
+			ruleClone.keyText = rule.keyText;
+		}
+
+		if (rule.hasOwnProperty('selectorText')) {
+			ruleClone.selectorText = rule.selectorText;
+		}
+
+		if (rule.hasOwnProperty('mediaText')) {
+			ruleClone.mediaText = rule.mediaText;
+		}
+
+		if (rule.hasOwnProperty('cssRules')) {
+			ruleClone.cssRules = clone(rule).cssRules;
+		}
+	}
+
+	return cloned;
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cssom.parse" id="apidoc.module.cssom.parse">module cssom.parse</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cssom.parse.parse" id="apidoc.element.cssom.parse.parse">
+        function <span class="apidocSignatureSpan">cssom.</span>parse
+        <span class="apidocSignatureSpan">(token)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parse(token) {
+
+	var i = 0;
+
+	<span class="apidocCodeCommentSpan">/**
+		"before-selector" or
+		"selector" or
+		"atRule" or
+		"atBlock" or
+		"before-name" or
+		"name" or
+		"before-value" or
+		"value"
+	*/
+</span>	var state = "before-selector";
+
+	var index;
+	var buffer = "";
+	var valueParenthesisDepth = 0;
+
+	var SIGNIFICANT_WHITESPACE = {
+		"selector": true,
+		"value": true,
+		"value-parenthesis": true,
+		"atRule": true,
+		"importRule-begin": true,
+		"importRule": true,
+		"atBlock": true,
+		'documentRule-begin': true
+	};
+
+	var styleSheet = new CSSOM.CSSStyleSheet();
+
+	// @type CSSStyleSheet|CSSMediaRule|CSSFontFaceRule|CSSKeyframesRule|CSSDocumentRule
+	var currentScope = styleSheet;
+
+	// @type CSSMediaRule|CSSKeyframesRule|CSSDocumentRule
+	var parentRule;
+
+	var name, priority="", styleRule, mediaRule, importRule, fontFaceRule, keyframesRule, documentRule, hostRule;
+
+	var atKeyframesRegExp = /@(-(?:\w+-)+)?keyframes/g;
+
+	var parseError = function(message) {
+		var lines = token.substring(0, i).split('\n');
+		var lineCount = lines.length;
+		var charCount = lines.pop().length + 1;
+		var error = new Error(message + ' (line ' + lineCount + ', char ' + charCount + ')');
+		error.line = lineCount;
+		/* jshint sub : true */
+		error['char'] = charCount;
+		error.styleSheet = styleSheet;
+		throw error;
+	};
+
+	for (var character; (character = token.charAt(i)); i++) {
+
+		switch (character) {
+
+		case " ":
+		case "\t":
+		case "\r":
+		case "\n":
+		case "\f":
+			if (SIGNIFICANT_WHITESPACE[state]) {
+				buffer += character;
+			}
+			break;
+
+		// String
+		case '"':
+			index = i + 1;
+			do {
+				index = token.indexOf('"', index) + 1;
+				if (!index) {
+					parseError('Unmatched "');
+				}
+			} while (token[index - 2] === '\\');
+			buffer += token.slice(i, index);
+			i = index - 1;
+			switch (state) {
+				case 'before-value':
+					state = 'value';
+					break;
+				case 'importRule-begin':
+					state = 'importRule';
+					break;
+			}
+			break;
+
+		case "'":
+			index = i + 1;
+			do {
+				index = token.indexOf("'", index) + 1;
+				if (!index) {
+					parseError("Unmatched '");
+				}
+			} while (token[index - 2] === '\\');
+			buffer += token.slice(i, index);
+			i = index - 1;
+			switch (state) {
+				case 'before-value':
+					state = 'value';
+					break;
+				case 'importRule-begin':
+					state = 'importRule';
+					break;
+			}
+			break;
+
+		// Comment
+		case "/":
+			if (token.charAt(i + 1) === "*") {
+				i += 2;
+				index = token.indexOf("*/", i);
+				if (index === -1) {
+					parseError("Missing */");
+				} else {
+					i = index + 1;
+				}
+			} else {
+				buffer += character;
+			}
+			if (state === "importRule-begin") {
+				buffer += " ";
+				state = "importRule";
+			}
+			break;
+
+		// At-rule
+		case "@":
+			if (token.indexOf("@-moz-document", i) === i) {
+				state = "documentRule-begin";
+				documentRule = new CSSOM.CSSDocumentRule();
+				documentRule.__starts = i;
+				i += "-moz-document".length;
+				buffer = "";
+				break;
+			} else if (token.indexOf("@media", i) === i) {
+				state = "atBlock";
+				mediaRule = new CSSOM.CSSMediaRule();
+				mediaRule.__starts = i;
+				i += "media".length;
+				buffer = "";
+				break;
+			} else if (token.indexOf("@host", i) === i) {
+				state = "hostRule-begin";
+				i += "host".length;
+				hostRule = new CSSOM.CSSHostRule();
+				hostRule.__starts = i;
+				buffer = "";
+				break;
+			} else if (token.indexOf("@import", i) === i) {
+				state = "importRule-begin";
+				i += "import".length;
+				buffer += "@import";
+				break;
+			} else if (token.indexOf("@font-face", i) === i) {
+				state = "fontFaceRule-begin";
+				i += "font-face".length;
+				fontFaceRule = new CSSOM.CSSFontFaceRule();
+				fontFaceRule.__starts = i;
+				buffer = "";
+				break;
+			} else {
+				atKeyframesRegExp.lastIndex = i;
+				var matchKeyframes = atKeyframesRegExp.exec(token);
+				if (matchKeyframes &amp;&amp; matchKeyframes.index === i) {
+					state = "keyframesRule-begin";
+					keyframesRule = new CSSOM.CSSKeyframesRule();
+					keyframesRule.__starts = i;
+					keyframesRule._vendorPrefix = matchKeyframes[1]; // Will come out as undefined if no prefix was found
+					i += matchKeyframes[0].length - 1; ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+# CSSOM
+
+CSSOM.js is a CSS parser written in pure JavaScript. It also a partial implementation of [CSS Object Model](http://dev.w3.org/csswg
+/cssom/).
+
+CSSOM.<span class="apidocCodeKeywordSpan">parse</span>("body {color: black}")
+-&gt; {
+  cssRules: [
+    {
+      selectorText: "body",
+      style: {
+        0: "color",
+        color: "black",
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
