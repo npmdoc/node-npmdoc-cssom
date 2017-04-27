@@ -973,20 +973,20 @@ Object.defineProperty(CSSOM.CSSDocumentRule.prototype, "cssText", {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-/**
- * @constructor
- * @see http://dev.w3.org/csswg/cssom/#css-font-face-rule
- */
-CSSOM.CSSFontFaceRule = function CSSFontFaceRule() {
-	CSSOM.CSSRule.call(this);
-	this.style = new CSSOM.<span class="apidocCodeKeywordSpan">CSSStyleDeclaration</span>();
-	this.style.parentRule = this;
-};
+	for (var i=0, rulesLength=rules.length; i &lt; rulesLength; i++) {
+		var rule = rules[i];
+		var ruleClone = cloned.cssRules[i] = new RULE_TYPES[rule.type]();
 
-CSSOM.CSSFontFaceRule.prototype = new CSSOM.CSSRule();
-CSSOM.CSSFontFaceRule.prototype.constructor = CSSOM.CSSFontFaceRule;
-CSSOM.CSSFontFaceRule.prototype.type = 5;
-//FIXME
+		var style = rule.style;
+		if (style) {
+			var styleClone = ruleClone.style = new CSSOM.<span class="apidocCodeKeywordSpan">CSSStyleDeclaration</span>();
+			for (var j=0, styleLength=style.length; j &lt; styleLength; j++) {
+				var name = styleClone[j] = style[j];
+				styleClone[name] = style[name];
+				styleClone._importants[name] = style.getPropertyPriority(name);
+			}
+			styleClone.length = style.length;
+		}
 ...</pre></li>
     </ul>
 
@@ -1038,21 +1038,21 @@ CSSOM.CSSFontFaceRule.prototype.type = 5;
 	this.cssRules = [];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
- * @see http://dev.w3.org/csswg/cssom/#cssimportrule
- * @see http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSImportRule
+ * Produces a deep copy of stylesheet â€” the instance variables of stylesheet are copied recursively.
+ * @param {CSSStyleSheet|CSSOM.CSSStyleSheet} stylesheet
+ * @nosideeffects
+ * @return {CSSOM.CSSStyleSheet}
  */
-CSSOM.CSSImportRule = function CSSImportRule() {
-	CSSOM.CSSRule.call(this);
-	this.href = "";
-	this.media = new CSSOM.MediaList();
-	this.styleSheet = new CSSOM.<span class="apidocCodeKeywordSpan">CSSStyleSheet</span>();
-};
+CSSOM.clone = function clone(stylesheet) {
 
-CSSOM.CSSImportRule.prototype = new CSSOM.CSSRule();
-CSSOM.CSSImportRule.prototype.constructor = CSSOM.CSSImportRule;
-CSSOM.CSSImportRule.prototype.type = 3;
+	var cloned = new CSSOM.<span class="apidocCodeKeywordSpan">CSSStyleSheet</span>();
 
-Object.defineProperty(CSSOM.CSSImportRule.prototype, "cssText", {
+	var rules = stylesheet.cssRules;
+	if (!rules) {
+		return cloned;
+	}
+
+	var RULE_TYPES = {
 ...</pre></li>
     </ul>
 
@@ -1854,20 +1854,20 @@ Object.defineProperty(CSSOM.CSSDocumentRule.prototype, "cssText", {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-/**
- * @constructor
- * @see http://dev.w3.org/csswg/cssom/#css-font-face-rule
- */
-CSSOM.CSSFontFaceRule = function CSSFontFaceRule() {
-	CSSOM.CSSRule.call(this);
-	this.style = new CSSOM.<span class="apidocCodeKeywordSpan">CSSStyleDeclaration</span>();
-	this.style.parentRule = this;
-};
+	for (var i=0, rulesLength=rules.length; i &lt; rulesLength; i++) {
+		var rule = rules[i];
+		var ruleClone = cloned.cssRules[i] = new RULE_TYPES[rule.type]();
 
-CSSOM.CSSFontFaceRule.prototype = new CSSOM.CSSRule();
-CSSOM.CSSFontFaceRule.prototype.constructor = CSSOM.CSSFontFaceRule;
-CSSOM.CSSFontFaceRule.prototype.type = 5;
-//FIXME
+		var style = rule.style;
+		if (style) {
+			var styleClone = ruleClone.style = new CSSOM.<span class="apidocCodeKeywordSpan">CSSStyleDeclaration</span>();
+			for (var j=0, styleLength=style.length; j &lt; styleLength; j++) {
+				var name = styleClone[j] = style[j];
+				styleClone[name] = style[name];
+				styleClone._importants[name] = style.getPropertyPriority(name);
+			}
+			styleClone.length = style.length;
+		}
 ...</pre></li>
     </ul>
 
@@ -1924,20 +1924,20 @@ CSSOM.CSSFontFaceRule.prototype.type = 5;
 	}</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-	// Doesn't work in IE &lt; 9
-	get cssText(){
-		var properties = [];
-		for (var i=0, length=this.length; i &lt; length; ++i) {
-			var name = this[i];
-			var value = this.getPropertyValue(name);
-			var priority = this.<span class="apidocCodeKeywordSpan">getPropertyPriority</span>(name);
-			if (priority) {
-				priority = " !" + priority;
+		var style = rule.style;
+		if (style) {
+			var styleClone = ruleClone.style = new CSSOM.CSSStyleDeclaration();
+			for (var j=0, styleLength=style.length; j &lt; styleLength; j++) {
+				var name = styleClone[j] = style[j];
+				styleClone[name] = style[name];
+				styleClone._importants[name] = style.<span class="apidocCodeKeywordSpan">getPropertyPriority</span>(name);
 			}
-			properties[i] = name + ": " + value + priority + ";";
+			styleClone.length = style.length;
 		}
-		return properties.join(" ");
-	},
+
+		if (rule.hasOwnProperty('keyText')) {
+			ruleClone.keyText = rule.keyText;
+		}
 ...</pre></li>
     </ul>
 
@@ -2349,21 +2349,21 @@ CSSOM.<span class="apidocCodeKeywordSpan">parse</span>("body {color: black}")
 	this.cssRules = [];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
- * @see http://dev.w3.org/csswg/cssom/#cssimportrule
- * @see http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSImportRule
+ * Produces a deep copy of stylesheet â€” the instance variables of stylesheet are copied recursively.
+ * @param {CSSStyleSheet|CSSOM.CSSStyleSheet} stylesheet
+ * @nosideeffects
+ * @return {CSSOM.CSSStyleSheet}
  */
-CSSOM.CSSImportRule = function CSSImportRule() {
-	CSSOM.CSSRule.call(this);
-	this.href = "";
-	this.media = new CSSOM.MediaList();
-	this.styleSheet = new CSSOM.<span class="apidocCodeKeywordSpan">CSSStyleSheet</span>();
-};
+CSSOM.clone = function clone(stylesheet) {
 
-CSSOM.CSSImportRule.prototype = new CSSOM.CSSRule();
-CSSOM.CSSImportRule.prototype.constructor = CSSOM.CSSImportRule;
-CSSOM.CSSImportRule.prototype.type = 3;
+	var cloned = new CSSOM.<span class="apidocCodeKeywordSpan">CSSStyleSheet</span>();
 
-Object.defineProperty(CSSOM.CSSImportRule.prototype, "cssText", {
+	var rules = stylesheet.cssRules;
+	if (!rules) {
+		return cloned;
+	}
+
+	var RULE_TYPES = {
 ...</pre></li>
     </ul>
 
