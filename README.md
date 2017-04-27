@@ -1,6 +1,6 @@
 # npmdoc-cssom
 
-#### api documentation for  [cssom (v0.3.2)](https://github.com/NV/CSSOM)  [![npm package](https://img.shields.io/npm/v/npmdoc-cssom.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-cssom) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-cssom.svg)](https://travis-ci.org/npmdoc/node-npmdoc-cssom)
+#### basic api documentation for  [cssom (v0.3.2)](https://github.com/NV/CSSOM)  [![npm package](https://img.shields.io/npm/v/npmdoc-cssom.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-cssom) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-cssom.svg)](https://travis-ci.org/npmdoc/node-npmdoc-cssom)
 
 #### CSS Object Model implementation and CSS parser
 
@@ -67,7 +67,8 @@
     "scripts": {
         "prepublish": "jake lib/index.js"
     },
-    "version": "0.3.2"
+    "version": "0.3.2",
+    "bin": {}
 }
 ```
 
